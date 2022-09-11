@@ -8,12 +8,39 @@
   --button-bkg: #f5f4fa;
   --hero-block-bkg: #2f303a;
 }
-.list {
-  list-style: none;
-}
+
 body {
   font-family: Roboto, sans-serif;
-  background-color: var(--white-color);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+img,
+svg {
+  display: block;
+}
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 /* Logo */
 .logo {
@@ -74,12 +101,26 @@ body {
   color: var(--accent-color);
 }
 /* Hero block */
+.hero-wrapper {
+  text-align: center;
+}
+.hero {
+  padding-top: 200px;
+  padding-bottom: 200px;
+  background-color: var(--hero-block-bkg);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/bkg-img.jpg);
+  background-size: 1600px;
+  background-repeat: no-repeat;
+  background-position: center;
+  max-width: 1600px;
+  margin: 0 auto;
+}
 .hero-title {
   color: var(--white-color);
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  /* or 136% */
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -115,8 +156,18 @@ body {
   color: var(--main-color);
   font-size: 14px;
   line-height: 1.71;
-  /* or 171% */
   letter-spacing: 0.03em;
+}
+.features-wrapper {
+  display: flex;
+}
+
+.feature-item + .feature-item {
+  margin-left: 30px;
+}
+
+.feature-item {
+  width: 270px;
 }
 .specialties-title {
   color: var(--black-color);
@@ -157,6 +208,16 @@ body {
   letter-spacing: 0.03em;
   margin-bottom: 16px;
 }
+.member + .member {
+  margin-left: 30px;
+}
+
+.member {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  background-color: var(--white-color);
+}
 /* Footer */
 .page-footer {
   background-color: var(--hero-block-bkg);
@@ -166,7 +227,6 @@ body {
   color: var(--white-color);
   font-size: 14px;
   line-height: 1.71;
-  /* or 171% */
   letter-spacing: 0.03em;
   text-decoration: none;
 }
@@ -174,7 +234,6 @@ body {
   color: var(--greyish-white);
   font-size: 14px;
   line-height: 1.71;
-  /* or 171% */
   letter-spacing: 0.03em;
   text-decoration: none;
   transition-property: color;
@@ -195,7 +254,6 @@ body {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
-  /* identical to box height, or 162% */
   text-align: center;
   letter-spacing: 0.03em;
   border-radius: 4px;
@@ -217,7 +275,6 @@ body {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
-  /* identical to box height, or 200% */
   letter-spacing: 0.06em;
   margin-bottom: 4px;
 }
@@ -225,36 +282,7 @@ body {
   color: var(--main-color);
   font-size: 16px;
   line-height: 1.88;
-  /* identical to box height, or 188% */
   letter-spacing: 0.03em;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ul {
-  margin-top: 0;
-  margin-bottom: 0;
-  margin-left: 0;
-  margin-right: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  padding-bottom: 0;
-}
-.section {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-.container {
-  width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
 }
 .specialties.section {
   padding-top: 0;
@@ -285,15 +313,6 @@ ul {
 .contact-item {
   margin-left: 50px;
 }
-.features-wrapper {
-  display: flex;
-}
-.feature-item + .feature-item {
-  margin-left: 30px;
-}
-.feature-item {
-  width: 270px;
-}
 .specialties-wrapper {
   display: flex;
 }
@@ -302,15 +321,6 @@ ul {
 }
 .list.team {
   display: flex;
-}
-.member + .member {
-  margin-left: 30px;
-}
-.member {
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 0px 0px 4px 4px;
-  background-color: var(--white-color);
 }
 .contact {
   margin-bottom: 9px;
@@ -331,24 +341,6 @@ ul {
   border-bottom: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
   padding: 20px 24px;
-}
-img {
-  display: block;
-}
-.hero {
-  padding-top: 200px;
-  padding-bottom: 200px;
-  background-color: var(--hero-block-bkg);
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url(../images/bkg-img.jpg);
-  background-size: 1600px;
-  background-repeat: no-repeat;
-  background-position: center;
-  max-width: 1600px;
-  margin: 0 auto;
-}
-.hero-wrapper {
-  text-align: center;
 }
 .team-wrapper {
   padding: 30px 10px;
@@ -373,9 +365,7 @@ img {
   padding: 25px 100px;
   margin-bottom: 30px;
 }
-svg {
-  display: block;
-}
+
 .link {
   color: #afb1b8;
   display: flex;
@@ -410,10 +400,10 @@ svg {
 }
 .footer-wrapper {
   display: flex;
+  align-items: baseline;
 }
 .links-wrapper {
   margin-left: 70px;
-  margin-top: 12px;
 }
 .clients-title {
   font-weight: 700;
@@ -597,13 +587,10 @@ svg {
 }
 .subscr-form {
   display: flex;
-  margin-left: 93px;
-  margin-top: 12px;
-  align-items: flex-start;
+  align-items: center;
 }
-.subscr-field {
-  display: flex;
-  flex-direction: column;
+.footer-form {
+  margin-left: auto;
 }
 .subscr-button {
   background-color: var(--accent-color);
@@ -612,12 +599,10 @@ svg {
   border-radius: 4px;
   border: none;
   display: flex;
-  margin-top: 36px;
   margin-left: 12px;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
-
   letter-spacing: 0.06em;
   color: var(--white-color);
   cursor: pointer;
@@ -631,34 +616,27 @@ svg {
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
-transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   background-color: transparent;
+  color: var(--white-color);
 }
-.subscr-input:focus{
-border-color: var(--accent-color);
-outline: none;
+.subscr-input:focus {
+  border-color: var(--accent-color);
+  outline: none;
 }
 .subscr-input::placeholder {
   font-size: 16px;
   line-height: 1.25;
-
   letter-spacing: 0.03em;
-
   color: rgba(255, 255, 255, 0.6);
 }
-
 .form-title {
-  font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--black-color);
   margin-bottom: 12px;
-}
-.field-ico {
-  fill: #212121;
-  position: absolute;
 }
 .field {
   display: flex;
@@ -682,8 +660,10 @@ outline: none;
   fill: var(--accent-color);
 }
 .field-ico {
+  fill: #212121;
+
   position: absolute;
-  top: +50%;
+  top: 50%;
   left: 12px;
   transform: translateY(-50%);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -709,6 +689,7 @@ outline: none;
   padding: 12px 16px;
   height: 120px;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  resize: none;
 }
 .field-text:focus {
   outline: none;
@@ -722,12 +703,12 @@ outline: none;
   color: rgba(117, 117, 117, 0.5);
 }
 .agree {
+  display: flex;
+  align-items: center;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--main-color);
-  min-width: 411px;
-  position: relative;
 }
 .submit-btn {
   font-weight: 700;
@@ -756,7 +737,6 @@ outline: none;
   margin: -1px;
   border: 0;
   padding: 0;
-
   white-space: nowrap;
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
@@ -768,28 +748,28 @@ outline: none;
   justify-content: center;
 }
 .check-ico {
-  background-color: var(--accent-color);
-  width: 16px;
-  height: 15px;
   display: inline-flex;
-  padding: 4px 2px 3px 3px;
   margin-right: 7px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   border-radius: 2px;
-  opacity: 0;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .agree-input:checked + .agree .check-ico {
-  opacity: 1;
+  background-color: var(--accent-color);
 }
 
-.not-check-ico {
-  position: absolute;
-  top: +50%;
-  left: 0;
-  transform: translateY(-50%);
-  opacity: 1;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 .agree-input:checked + .agree .not-check-ico {
   opacity: 0;
+}
+.agree .not-checked {
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.agree-input:checked + .agree .not-checked {
+  opacity: 0;
+}
+.agree .checked {
+  opacity: 0;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.agree-input:checked + .agree .checked {
+  opacity: 1;
 }

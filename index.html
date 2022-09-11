@@ -322,23 +322,16 @@
             ></a>
           </div>
         </div>
-        <form class="subscr-form">
-          <div class="subscr-field">
-            <label for="mail-subscr" class="subscr-label"> Підпишіться на розсилку</label>
-            <input
-              class="subscr-input"
-              type="email"
-              name="mail-subscr"
-              id="mail-subscr"
-              placeholder="E-mail"
-            />
-          </div>
-
-          <button class="subscr-button" type="submit">
-            Підписатися
-            <svg width="24" height="24"><use href="./images/icons.svg#icon-send"></use></svg>
-          </button>
-        </form>
+        <div class="footer-form">
+          <p class="subscr-label">Підпишіться на розсилку</p>
+          <form class="subscr-form">
+            <input class="subscr-input" type="email" name="mail-subscr" placeholder="E-mail" />
+            <button class="subscr-button" type="submit">
+              Підписатися
+              <svg width="24" height="24"><use href="./images/icons.svg#icon-send"></use></svg>
+            </button>
+          </form>
+        </div>
       </div>
     </footer>
     <div class="backdrop is-hidden" data-modal>
@@ -390,21 +383,16 @@
           </div>
           <div class="agree-wrapper">
             <input class="visually-hidden agree-input" type="checkbox" name="agree" id="agree" />
-
             <label class="agree" for="agree">
               <span class="check-ico">
-                <svg>
-                  <use href="./images/icons.svg#icon-check"></use>
+                <svg width="16" height="15">
+                  <use class="checked" href="./images/icons.svg#icon-check"></use>
+                  <use class="not-checked" href="./images/icons.svg#not-checked"></use>
                 </svg>
               </span>
-              <svg class="not-check-ico" width="16" height="15">
-                <use href="./images/icons.svg#not-checked"></use>
-              </svg>
-
               Погоджуюся з розсилкою та приймаю<a class="condit" href=""> Умови договору</a></label
             >
           </div>
-
           <button class="submit-btn" type="submit">Відправити</button>
         </form>
       </div>
